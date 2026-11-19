@@ -5,7 +5,7 @@
     {
       "name": "roblox-workflow",
       "source": "./plugins/roblox-workflow",
-      "description": "Правила работы (CLAUDE.md) и команды /setup, /total, /new для проекта Roblox Studio"
+      "description": "Правила работы (CLAUDE.md) и команды /setup, /total, /new для любого проекта (с поддержкой Roblox Studio)"
     }
   ]
 }

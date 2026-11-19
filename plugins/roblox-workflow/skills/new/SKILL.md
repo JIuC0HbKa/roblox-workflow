@@ -8,7 +8,7 @@ description: Hand off the current chat to a fresh Claude Code session in the sam
 Project folder = the current working directory (holds `CLAUDE.md`, `tools/`, `Chat/`).
 
 ## Steps
-0. **Unfinished work.** If a task is in progress — finish the current step or stop at a safe point. If Roblox Studio is connected, call `save_place` (NotNeeded = nothing to save). Anything unfinished goes into `wip:` of the summary with the exact next step.
+0. **Unfinished work.** If a task is in progress — finish the current step or stop at a safe point. Save the project the way it is saved (e.g. Roblox Studio connected → `save_place`, NotNeeded = nothing to save; files on disk need nothing). Anything unfinished goes into `wip:` of the summary with the exact next step.
 1. **Summary.** Run `tools/chat-extract.ps1` first. If `Chat/latest.md` exists and the delta in `Chat/extract.txt` is empty or trivial (< ~500 chars, nothing project-relevant) — the summary is current: skip the merge (only add the handed-over message to `wip:` if there is one). Otherwise do the rest of the `total` skill. Don't paste the summary into the chat.
    If /new was forced by the context rule, the user's pending message (task or question) goes into `wip:` verbatim-short as «передано: …».
 2. **Name.** `Chat/chat-counter.txt` holds the current chat number (default 1); N = +1. Write N back only after step 3 succeeds.
