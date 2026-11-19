@@ -1,4 +1,4 @@
-# roblox-workflow
+﻿# roblox-workflow
 
 Плагин Claude Code: правила работы над проектом Roblox Studio (`CLAUDE.md`) и команды:
 
@@ -13,7 +13,7 @@
 ## Установка (один раз)
 В Claude Code (вкладка Code в приложении Claude):
 ```
-/plugin marketplace add <аккаунт>/roblox-workflow
+/plugin marketplace add JIuC0HbKa/roblox-workflow
 /plugin install roblox-workflow@roblox-workflow
 ```
 Репозиторий приватный — нужен доступ к нему на GitHub и вход в git на этом компьютере.
