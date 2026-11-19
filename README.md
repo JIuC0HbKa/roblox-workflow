@@ -1,4 +1,4 @@
-﻿# roblox-workflow
+# roblox-workflow
 
 Плагин Claude Code: правила работы над проектом Roblox Studio (`CLAUDE.md`) и команды:
 
