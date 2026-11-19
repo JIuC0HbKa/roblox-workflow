@@ -1,0 +1,11 @@
+{
+  "name": "roblox-workflow",
+  "owner": { "name": "roblox-workflow" },
+  "plugins": [
+    {
+      "name": "roblox-workflow",
+      "source": "./plugins/roblox-workflow",
+      "description": "Правила работы (CLAUDE.md) и команды /setup, /total, /new для проекта Roblox Studio"
+    }
+  ]
+}
