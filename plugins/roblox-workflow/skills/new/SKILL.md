@@ -18,8 +18,11 @@ Project folder = the current working directory (holds `CLAUDE.md`, `tools/`, `Ch
    - title as above; name = same, lowercase, `_`→`-`, ≤24 chars
    - prompt: «Продолжение работы над проектом. Если правил из `CLAUDE.md` нет в твоём контексте — прочитай `CLAUDE.md` (обязательны). Прочитай `Chat/latest.md` (сводка прошлого чата). Если в `wip:` есть «передано: …» — это сообщение пользователя: обработай его по правилам (вопрос — ответ; задача — план + вопрос по правилу 6). Иначе одной строкой подтверди готовность и жди задачу.»
    - background: «Продолжение проекта из прошлого чата. Правила работы — в CLAUDE.md этой папки (личные — в CLAUDE.local.md), контекст — в Chat/latest.md (сжатая сводка). Отвечай кратко, на языке пользователя.»
-4. **Reply**, 1–2 lines: link `[title](#local_<id>)` from the tool result; offer to archive this chat.
+4. **Detach** the new session: `mcp__ccd_session_mgmt__detach_session` with its id (otherwise archiving this chat archives it too).
+5. **Old chats** — one active chat per project: `mcp__ccd_session_mgmt__list_sessions` → other active sessions titled `<project>_chat_ver*` except the new one → `archive_session` each (reason «/new: старый чат проекта»). Still working / refused — leave it, mention in one line.
+6. **Reply**, 1–2 lines: link `[title](#local_<id>)` from the tool result; «этот чат уходит в архив (читать/вернуть — раздел архива в боковой панели)».
+7. **Last call of the turn:** `archive_session` with `self` (the conversation ends; nothing may follow). Load the session-mgmt tools via ToolSearch if deferred.
 
 ## Rules
 - Never start the session before latest.md is written.
-- If start_session is refused — say why in one line; the summary is ready for a manual start («прочитай Chat/latest.md»).
+- If start_session is refused — say why in one line; the summary is ready for a manual start («прочитай Chat/latest.md»). Archive nothing then.
